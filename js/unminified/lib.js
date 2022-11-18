@@ -1,4 +1,4 @@
-const {atan2,sin,cos,sqrt,abs,PI} = Math;
+const {atan2,sin,cos,sqrt,hypot,abs,PI} = Math;
 
 const HALF = PI / 2;
 
@@ -44,11 +44,7 @@ function Distance(point_from, point_to) {
     const b = y_to - y_from;
     const c = z_to - z_from;
 
-    return sqrt(
-        a * a + 
-        b * b +
-        c * c
-    );
+    return hypot(a,b,c);
 }
 
 function applyMatrix(vector, matrix) {
